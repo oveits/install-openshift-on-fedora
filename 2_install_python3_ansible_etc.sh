@@ -2,7 +2,7 @@
 dnf install -y python3
 # python3-3.6.5-1.fc28.x86_64 already installed, skipping
 
-#pip3 install ansible
+pip3 install ansible
 # Successfully installed ansible-2.6.4 bcrypt-3.1.4 paramiko-2.4.2 pyasn1-0.4.4 pynacl-1.2.1
 # however. later, I got the message 
 # TASK [Run variable sanity checks] ************************************************************************************
@@ -14,5 +14,5 @@ dnf install -y python3
 
 
 # On https://github.com/openshift/openshift-ansible/issues/7952, we get the hint
-the instalation can be done like follows:
-dnf install -y ansible-python3
+#the instalation can be done like follows:
+#dnf install -y ansible-python3
