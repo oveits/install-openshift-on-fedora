@@ -16,3 +16,5 @@ pip3 install ansible
 # On https://github.com/openshift/openshift-ansible/issues/7952, we get the hint
 #the instalation can be done like follows:
 #dnf install -y ansible-python3
+
+ansible --version
