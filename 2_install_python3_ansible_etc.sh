@@ -3,6 +3,15 @@
 # python3-3.6.5-1.fc28.x86_64 already installed, skipping
 
 [ "$INSTALL" == "dnf" ] && pip3 install ansible || $INSTALL install -y ansible
+
+if [ "$INSTALL" == "yum" ]; then
+  ansible --version
+  git clone git://github.com/ansible/ansible.git --recursive ansible-new-version-from-source
+  cd ansible-new-version-from-source/
+  git checkout stable-2.7
+  source ./hacking/env-setup
+fi
+
 # Successfully installed ansible-2.6.4 bcrypt-3.1.4 paramiko-2.4.2 pyasn1-0.4.4 pynacl-1.2.1
 # however. later, I got the message 
 # TASK [Run variable sanity checks] ************************************************************************************
@@ -18,3 +27,4 @@
 #$INSTALL install -y ansible-python3
 
 ansible --version
+
