@@ -5,11 +5,14 @@
 [ "$INSTALL" == "dnf" ] && pip3 install ansible || $INSTALL install -y ansible
 
 if [ "$INSTALL" == "yum" ]; then
-  ansible --version
-  git clone git://github.com/ansible/ansible.git --recursive ansible-new-version-from-source
-  cd ansible-new-version-from-source/
-  git checkout stable-2.7
-  source ./hacking/env-setup
+  #ansible --version
+  #git clone git://github.com/ansible/ansible.git --recursive ansible-new-version-from-source
+  #cd ansible-new-version-from-source/
+  #git checkout stable-2.7
+  #source ./hacking/env-setup
+
+  yum install -y epel-release
+  yum install -y ansible-2.6.4-1.el7.noarch
 fi
 
 # Successfully installed ansible-2.6.4 bcrypt-3.1.4 paramiko-2.4.2 pyasn1-0.4.4 pynacl-1.2.1
